@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git diff)",
+      "Bash(git diff *)",
+      "Bash(git log)",
+      "Bash(git log *)",
+      "Bash(git branch)",
+      "Bash(git branch *)",
+      "Bash(ls)",
+      "Bash(ls *)",
+      "Bash(node -e *)",
+      "Bash(npm run dev)",
+      "Bash(npm run dev *)",
+      "Bash(astro dev)",
+      "Bash(astro dev *)",
+      "Bash(pnpm dev)",
+      "Bash(pnpm run dev)",
+      "Bash(pnpm astro dev)",
+      "Edit(src/**)",
+      "Edit(**/*.astro)",
+      "Edit(**/*.css)",
+      "Edit(**/*.ts)",
+      "Edit(**/*.json)",
+      "Write(src/**)",
+      "Write(**/*.astro)",
+      "Write(**/*.css)",
+      "Write(**/*.ts)",
+      "Write(**/*.json)"
+    ]
+  }
+}
