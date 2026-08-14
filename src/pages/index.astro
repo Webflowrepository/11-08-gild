@@ -15,12 +15,35 @@ import '../styles/global.css';
 <Layout
   title="GILD — Post Event Portal"
   description="We truly appreciated having you at this GILD Edition."
+  showFooterSocials={false}
 >
   <!-- 01. HERO -->
   <section class="hero-section">
     <div class="hero-top">
       <img src="/assets/logos/logo-gild.png" alt="GILD" class="gild-logo" />
       <p class="hero-eyebrow text-eyebrow">AI Forum</p>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/company/joingild/about/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/gild.hq/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@GILDhq" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+          </svg>
+        </a>
+      </div>
     </div>
 
     <div class="hero-center">
@@ -57,6 +80,7 @@ import '../styles/global.css';
       <h2 class="text-display-m" style="color: var(--color-fg); text-align: center;">
         Next Event GILD Austin
       </h2>
+      <p class="next-event-date text-body-s">September 10</p>
     </div>
     <div class="next-event-content">
       <a href="https://luma.com/GILD27" target="_blank" rel="noopener" class="next-event-link">
@@ -109,6 +133,24 @@ import '../styles/global.css';
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 400;
+  }
+
+  .hero-socials {
+    display: flex;
+    gap: 18px;
+    margin-top: 4px;
+  }
+
+  .hero-socials a {
+    color: var(--color-fg-muted);
+    transition: color var(--duration-hover) var(--ease-entrance);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-socials a:hover {
+    color: var(--color-fg);
   }
 
   .hero-center {
@@ -185,6 +227,14 @@ import '../styles/global.css';
   .next-event-header {
     max-width: 480px;
     margin: 0 auto;
+  }
+
+  .next-event-date {
+    color: var(--color-fg-muted);
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 8px 0 0;
   }
 
   .next-event-content {
@@ -304,6 +354,6 @@ import '../styles/global.css';
     });
 
     // Sections Entrance
-    animateFadeUp('.next-event-wrapper', '.next-event-header h2, .next-event-content', { stagger: 0.2 });
+    animateFadeUp('.next-event-wrapper', '.next-event-header h2, .next-event-date, .next-event-content', { stagger: 0.2 });
   });
 </script>
