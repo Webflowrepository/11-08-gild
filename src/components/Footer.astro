@@ -7,7 +7,7 @@ const { showSocials = true } = Astro.props;
 ---
 
 <footer class="site-footer">
-  <div class="footer-container">
+  <div class:list={['footer-container', { 'footer-container--centered': !showSocials }]}>
     <div class="footer-logo">
       <a href="https://gildhq.com" target="_blank" rel="noopener" class="footer-logo-link">
         <img src="/assets/logos/logo-gild.png" alt="GILD" />
@@ -92,6 +92,10 @@ const { showSocials = true } = Astro.props;
   @media (min-width: 768px) {
     .footer-container {
       flex-direction: row;
+    }
+
+    .footer-container--centered {
+      justify-content: center;
     }
   }
 </style>
